@@ -1,1 +1,0 @@
-LAB4_API_KEY=gia_secret_key
