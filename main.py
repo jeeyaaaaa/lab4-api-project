@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, status
+from fastapi import FastAPI, HTTPException, status, Response
 from pydantic import BaseModel, Field
 from typing import Optional
 import os
@@ -107,5 +107,5 @@ def delete_task_v2(task_id: int):
 @app.get("/apiv2/tasks")
 def get_tasks():
     if not task_db:
-        return {"status": "ok", "message": "No tasks found."}, 204
+        return Response(content="No tasks found.", status_code=status.HTTP_204_NO_CONTENT)
     return {"status": "ok", "tasks": task_db}
