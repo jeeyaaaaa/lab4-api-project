@@ -27,7 +27,7 @@ task_db = [
 
 # Root route for testing deployment
 @app.get("/")
-def root():
+def read_root():
     return {"message": "Welcome to the Task API!"}
 
 # --- Version 1 (apiv1) ---
