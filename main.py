@@ -116,4 +116,4 @@ def delete_task_v2(task_id: int):
 def get_tasks():
     if not task_db:
         return Response(content="No tasks found.", status_code=status.HTTP_204_NO_CONTENT)
-    return {"status": "ok", "tasks": task_db"}
+    return {"status": "ok", "tasks": task_db}
